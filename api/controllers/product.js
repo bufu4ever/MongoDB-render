@@ -3,14 +3,14 @@ module.exports = {
         const ProductModel = require('../models/product');
         ProductModel.find().then((products)=>{
             console.log(products);
-            return res.status(200).json(products);
+            return res.status(200).render('products',{layout:'page',products});
             });
     },
     GetAllProductById : (req,res) =>{ 
         const ProductModel = require('../models/product');
         ProductModel.findOne({"Pid":req.params.id}).then((products)=>{
             console.log(products);
-            return res.status(200).json(products);
+            return res.status(200).render('products', { products });
         })
     },
     AddProduct : (req,res)=>{

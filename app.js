@@ -32,8 +32,8 @@ app.get('/contact',(req,res)=>{
 app.get('/gallery',(req,res)=>{
     res.render('gallery',{layout:'page'});
 });
-app.get('/products',(req,res)=>{
-        res.render('products',{layout:'page'});
+app.get('/product',(req,res)=>{
+        res.render('products',{layout:'main'});
     });
 
 
