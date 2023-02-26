@@ -3,10 +3,23 @@ body{
 }
 
 .main{
+    text-align: center;
     display:inline-table;
     vertical-align:auto;
     height: 200px;
     width: 275px;
-    border: 1px solid blue;
-    box-sizing: content-box;
+    border: 0.5px solid blue;
+    box-sizing:content-box;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.second{
+    height: 200px;
+    width: 1515px;
+    border: 0.5px solid blue;
+    vertical-align:auto;
+    text-align: center;
+    
+}
+p,h1{
+    font-family: "Lucida Console", "Courier New", monospace;
 }

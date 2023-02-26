@@ -1,8 +1,11 @@
 {{#each products}}
-<div>
+{{#if Pname}}
+<div class="second">
+  <br/>
   <h1>{{this.Pname}}</h1>
   <p>{{this.Pid}}</p>
   <p>{{this.Brand}}</p>
   <p>{{this.Price}}</p>
 </div>
+{{/if}}
 {{/each}}
