@@ -1,10 +1,12 @@
-const express = require("express");
-const app = express();
+const express = require("express");// חיבור לסיפריית אקפרס
+const app = express();// יצירת אובייקט 
 const hbs = require("express-handlebars").engine;
-const moragan = require("morgan");
+const moragan = require("morgan");//חיבור לסיפריית מורגן
+//Debugging
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(moragan("dev"));
+
+app.use(moragan("dev"));// הוספת שכבת מורגן
 app.use(express.static("public"));
 
 app.set("views", "./views");
@@ -22,12 +24,12 @@ app.set("view engine", "hbs");
 
 app.use(express.static("public"));
 const Productrouter = require("./api/routes/product");
-const mongoose = require("mongoose");
+const mongoose = require("mongoose");// קישור לסיפריית מונו
 
 mongoose.set("strictQuery", true);
 const Conn_str = `mongodb+srv://shawnDB:bufu4ever@cluster0.lssdz12.mongodb.net/ecomdb`;
-mongoose.connect(Conn_str);
-app.use("/product", Productrouter);
+mongoose.connect(Conn_str);// פתיחת חיבור למונגו
+app.use("/product", Productrouter);// הוספת שכבת ניתוב
 
 app.get("/contact", (req, res) => {
   res.render("contact", { layout: "page" });
