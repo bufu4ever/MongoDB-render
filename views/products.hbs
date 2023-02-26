@@ -1,5 +1,12 @@
 {{#each products}}
-  <h1>{{this}}</h1>
+{{#each this}}
+{{#if Pname}}
+  <div class="main">
+  <h2>Name: {{this.Pname}}</h2>
+  <h2>Brand: {{this.Brand}}</h2>
+  <h2>ID: {{this.Pid}}</h2>
+  <h2>Price:  {{this.Price}}</h2>
+  </div>
+  {{/if}}
 {{/each}}
-
-<h1>{{products}}</h1>
+{{/each}}

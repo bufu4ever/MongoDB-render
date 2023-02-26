@@ -1,0 +1,12 @@
+body{
+    background-color:#ccc;
+}
+
+.main{
+    display:inline-table;
+    vertical-align:auto;
+    height: 200px;
+    width: 275px;
+    border: 1px solid blue;
+    box-sizing: content-box;
+}

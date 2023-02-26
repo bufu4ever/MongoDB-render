@@ -4,7 +4,6 @@ const ProductSchema = mongoose.Schema({
     Pid:Number,
     Pname:String,
     Price:Number,
-    Pdesc:String,
-    PicName:String
+    Brand:String,
     },{versionKey : false}); 
 module.exports = mongoose.model('product',ProductSchema);
