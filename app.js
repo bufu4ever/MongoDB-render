@@ -5,12 +5,12 @@ const moragan = require("morgan");//חיבור לסיפריית מורגן
 //Debugging
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
 app.use(moragan("dev"));// הוספת שכבת מורגן
-app.use(express.static("public"));
 
+
+//הגדרת תיקיית תצוגות של המערכת
 app.set("views", "./views");
-
+//הגדרת מנוע חיפוש הנדל ברס
 app.engine("hbs", hbs({
   extname: "hbs",
   defaultView: "page",
@@ -21,7 +21,6 @@ app.engine("hbs", hbs({
 
 
 app.set("view engine", "hbs");
-
 app.use(express.static("public"));
 const Productrouter = require("./api/routes/product");
 const mongoose = require("mongoose");// קישור לסיפריית מונו
