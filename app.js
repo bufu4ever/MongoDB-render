@@ -11,15 +11,15 @@ app.use(express.static("public"));
 
 app.set("views", "./views");
 
-app.engine(
-  "hbs",
-  hbs({
-    extname: "hbs",
-    defaultView: "page",
-    layoutsDir: __dirname + "/views/layouts/",
-    partialsDir: __dirname + "/views/partials/",
-  })
-);
+app.engine("hbs", hbs({
+  extname: "hbs",
+  defaultView: "page",
+  layoutsDir: __dirname + "/views/layouts/",
+  partialsDir: __dirname + "/views/partials/",
+}));
+  
+
+
 app.set("view engine", "hbs");
 
 app.use(express.static("public"));
