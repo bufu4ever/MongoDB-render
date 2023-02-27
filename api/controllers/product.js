@@ -1,3 +1,4 @@
+//נקודות קצה
 module.exports = {
     GetAllProducts : (req,res)=>{
         const ProductModel = require('../models/product');
@@ -37,4 +38,5 @@ module.exports = {
             return res.status(200).render('product',{layout:'page',products});
             });
     }
+    
 };
