@@ -1,3 +1,4 @@
+// ניתובים
 const router = require('express').Router();
 
 const {GetAllProducts, GetAllProductById, UpdateProduct, AddProduct, DeleteProduct} = require('../controllers/product');
