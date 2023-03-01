@@ -10,9 +10,16 @@ module.exports = {
     GetAllProductById : (req,res) =>{ 
         const ProductModel = require('../models/product');
         ProductModel.findOne({"Pid":req.params.id}).then((products)=>{
-            console.log(products);
+            if(req.params.id > 10)
+            {
+                console.log("err");
+                return res.status(404).render('404');
+            }
+            else{
+                console.log(products);
             return res.status(200).render('product', {layout:'page',products });
-        })
+            }
+        });
     },
     AddProduct : (req,res)=>{
         const ProductModel = require('../models/product');

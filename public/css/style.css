@@ -4,22 +4,19 @@ body{
 
 .main{
     text-align: center;
-    display:inline-table;
-    vertical-align:auto;
-    height: 200px;
-    width: 275px;
+    display:inline-table; 
+    margin: auto;
+    height: 270px;
+    width: 270px;
     border: 0.5px solid blue;
-    box-sizing:content-box;
     font-family: "Lucida Console", "Courier New", monospace;
 }
 .second{
-    height: 200px;
-    width: 1515px;
+    margin:auto ;
+    height: 270px;
+    width: 270px;
     border: 0.5px solid blue;
-    vertical-align:auto;
-    text-align: center;
-    
-}
-p,h1{
     font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
 }
+
