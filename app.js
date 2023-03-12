@@ -37,5 +37,10 @@ app.get("/product", (req, res) => {
     res.render("product", { layout: "page" });
 });
 
+app.get("/contact", (req, res) => {
+  res.render("contact", { layout: "page" });
+});
+
+
 
 module.exports = app;
