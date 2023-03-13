@@ -34,7 +34,7 @@ app.use("/product", Productrouter);// הוספת שכבת ניתוב
 
 
 app.get("/product", (req, res) => {
-    res.render("product", { layout: "page" });
+  res.render("product", { layout: "page" });
 });
 
 app.get("/contact", (req, res) => {
